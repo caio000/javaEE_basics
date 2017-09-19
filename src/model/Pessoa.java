@@ -1,6 +1,6 @@
 package model;
 
-public class User {
+public class Pessoa {
 
 	private String cpf;
 	private String rg;
@@ -13,15 +13,17 @@ public class User {
 	
 	// Construtor
 	
-	public User(String cpf, String rg, String nome) {
+	public Pessoa(String cpf, String rg, String nome) {
 		this.cpf = cpf;
 		this.rg = rg;
 		this.nome = nome;
 	}
 	
-	public User(String cpf, String nome) {
+	public Pessoa(String cpf, String nome) {
 		this(cpf, null, nome);
 	}
+	
+	public Pessoa() {}
 	
 	//	Métodos
 	

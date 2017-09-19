@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import banco.MySQLDatabase;
+import model.Pessoa;
+
 /**
  * Servlet implementation class Login
  */
@@ -21,7 +24,6 @@ public class Login extends HttpServlet {
      */
     public Login() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -36,9 +38,17 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String senha = request.getParameter("user_password");
 		String email = request.getParameter("user_email");
-			
-		System.out.println(email);
+		
+		System.out.println("Conectando no banco de dados...................");
+		MySQLDatabase db = new MySQLDatabase("root", "", "EVENTO");
+		db.connect();
+		
+		Pessoa user = new Pessoa();
+		user.setEmail(email);
+		user.setSenha(senha);
+		
 	}
 
 }

@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXISTS EVENTO;
+
+USE EVENTO;
+
+CREATE TABLE Pessoas (
+	cpf			VARCHAR(11)		NOT NULL,
+	rg			VARCHAR(9)		NOT NULL,
+	expeditor	VARCHAR(10)		NOT NULL,
+	nome		VARCHAR(20) 	NOT NULL,
+	sobrenome	VARCHAR(50)		NOT NULL,
+	prontuario	VARCHAR(7)		NOT NULL,
+	email		VARCHAR(100)	NOT NULL,
+	senha		VARCHAR(64)		NOT NULL,
+	PRIMARY KEY (cpf)
+);
+
+CREATE TABLE Eventos (
+	id		INT				NOT NULL,
+	nome	VARCHAR(100)	NOT NULL,
+	data	DATE			NULL,
+	hora	TIME			NULL,
+	PRIMARY KEY (id)
+);

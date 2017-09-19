@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 			<form method="post" action="Login">
 				<div class="form-group">
 					<label for="user_email">Email:</label>
-					<input id="user_email" name="user_email" class="form-control" type="email" required />
+					<input id="user_email" name="user_email" class="form-control" type="email" value="" required="required" />
 				</div>
 				
 				<div class="form-group">
