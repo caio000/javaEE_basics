@@ -63,7 +63,6 @@ public abstract class BancoDeDadosAbstract implements IBancoDeDados {
 			
 			String url = "jdbc:mysql://%s:%s/%s?user=%s&password=%s";
             url = String.format(url ,this.host, this.port, this.database, this.username, this.password);
-            System.out.printf(url);
 			this.connection = DriverManager.getConnection(url);
 			this.connection.setAutoCommit(true);
 			this.isConnect = true;
